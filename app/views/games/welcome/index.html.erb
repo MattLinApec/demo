@@ -1,0 +1,23 @@
+<p>Hola! It's <%= Time.now %></p>
+<p><%= link_to 'Hello!', games_welcome_say_hello_path %></p>
+<p><%= link_to "Say Hi", welcome_say_hi_path %></p>
+<table>
+  <tr>
+    <th>OuterBoxNo</th>
+    <th>InnerBoxNo</th>
+    <th>Prod ID</th>
+    <th>Lot No</th>
+    <th>Qty</th>
+  </tr>
+  <% @on_way.each do |r| %>
+      <tr>
+        <td><%= r.OUTER_BOX_NO %></td>
+        <td><%= r.INNER_BOX_NO %></td>
+        <td><%= r.PROD_ID %></td>
+        <td><%= r.LOT_NO %></td>
+        <td><%= r.QTY %></td>
+      </tr>
+  <% end %>
+</table>
+
+
