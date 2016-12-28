@@ -1,0 +1,33 @@
+# SQLite version 3.x
+#   gem install sqlite3
+#
+#   Ensure the SQLite 3 gem is defined in your Gemfile
+#   gem 'sqlite3'
+#
+default: &default
+  adapter: sqlserver
+  #dataserver: 'PPM-SERVER'
+  host: 192.168.10.177
+  #mode: dblib
+  username: sa
+  password: apec6215899
+
+
+#development:
+#  <<: *default
+#  database: db/development.sqlite3
+
+development:
+  <<: *default
+  database: DW
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *default
+  database: Temp
+
+production:
+  <<: *default
+  database: Basic
