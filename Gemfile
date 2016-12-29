@@ -40,3 +40,4 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 gem 'tiny_tds', platforms: [:mingw, :mswin, :x64_mingw]
 gem 'activerecord-sqlserver-adapter'
+gem 'execjs'
